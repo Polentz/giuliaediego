@@ -497,10 +497,6 @@ span.inner-icon.caption {
     .section:not(:last-of-type) {
         min-height: unset;
     }
-
-    .section-item {
-        margin-top: 8rem;
-    }
 }
 
 @media screen and (max-width: 720px) {
@@ -586,6 +582,10 @@ span.inner-icon.caption {
 
     .section:first-of-type {
         padding-top: 4rem;
+    }
+
+    .section-item {
+        margin-top: 1rem;
     }
 
     .image-container {

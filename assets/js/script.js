@@ -66,7 +66,7 @@ const observeFooter = () => {
 };
 
 const observeSections = () => {
-    if (window.scrollY || document.documentElement.scrollTop) {
+    if (document.scrollTop === 10) {
         document.getElementById("benvenuti").classList.add("--current");
     };
     const sections = document.querySelectorAll(".section, .footer");
@@ -84,7 +84,7 @@ const observeSections = () => {
                         item.classList.add("--current");
                     };
                 });
-            } else if (window.scrollY || document.documentElement.scrollTop) {
+            } else if (document.scrollTop === 10) {
                 document.getElementById("benvenuti").classList.add("--current");
             };
         });
