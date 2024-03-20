@@ -5,4 +5,9 @@
     --color-blue: #2b08c2;
     --top: 1rem;
     --left-right: 4rem;
+    --main-text-size: 2rem;
+    --text-size: 1.2rem;
+    --small-text-size: 0.85rem;
+    --spanWidth: 80vw;
+    --spanTiming: 20s;
 }
