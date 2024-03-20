@@ -487,10 +487,6 @@ a.nav-item {
         position: static;
     }
 
-    /* .text-headline {
-        justify-self: start;
-    } */
-
     span.inner-icon {
         font-size: var(--small-text-size);
     }
@@ -503,6 +499,7 @@ a.nav-item {
     .header {
         display: flex;
         justify-content: center;
+        z-index: 999;
     }
 
     .header-text img {
