@@ -4,16 +4,16 @@
     font-family: "Sprat";
     font-style: normal;
     font-weight: 400;
-    src: local("/assets/fonts/Sprat-Regular.woff2") format("woff2"),
-        local("/assets/fonts/Sprat-Regular.woff") format("woff");
+    src: url("../fonts/Sprat-Regular.woff2") format("woff2"),
+        url("../fonts/Sprat-Regular.woff") format("woff");
 }
 
 @font-face {
     font-family: "Sprat";
     font-style: normal;
     font-weight: 500;
-    src: local("/assets/fonts/Sprat-Medium.woff2") format("woff2"),
-        local("/assets/fonts/Sprat-Medium.woff") format("woff");
+    src: url("../fonts/Sprat-Medium.woff2") format("woff2"),
+        url("../fonts/Sprat-Medium.woff") format("woff");
 }
 
 @-webkit-keyframes marquee {
