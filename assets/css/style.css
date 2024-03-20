@@ -119,6 +119,12 @@ a.inner-link {
     text-underline-offset: 4px;
 }
 
+a.inner-link:hover {
+    color: var(--color-blue);
+    -webkit-text-decoration-style: solid;
+    text-decoration-style: solid;
+}
+
 span.inner-icon {
     position: relative;
     display: inline-block;
@@ -131,8 +137,8 @@ span.inner-icon {
 
 span.inner-icon::after {
     content: "";
-    width: 1.75rem;
-    height: 1.75rem;
+    width: 1.5rem;
+    height: 1.5rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -166,7 +172,7 @@ span.inner-icon.caption {
     font-family: "Sprat";
     font-weight: 500;
     font-style: normal;
-    font-size: var(--text-size);
+    font-size: var(--header-text-size);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -196,7 +202,7 @@ span.inner-icon.caption {
     font-family: "futura-pt";
     font-weight: 600;
     font-style: normal;
-    font-size: 0.85rem;
+    font-size: .85rem;
     text-transform: uppercase;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -225,11 +231,7 @@ span.inner-icon.caption {
     position: relative;
 }
 
-a.nav-item {
-    text-decoration: none;
-}
-
-.--lang {
+.nav-item.--lang {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -239,21 +241,27 @@ a.nav-item {
     gap: 2px;
 }
 
-.--lang span {
+.nav-item.--lang span {
     font-size: smaller;
 }
 
-.nav-item::after {
-    content: "";
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: var(--color-blue);
+.nav-item.--current,
+.nav-item.--current:hover {
+    text-decoration: underline;
+    -webkit-text-decoration-style: dashed;
+    text-decoration-style: dashed;
+    -webkit-text-decoration-color: var(--color-blue);
+    text-decoration-color: var(--color-blue);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 
-.nav-item.--current::after {
-    height: 1px;
+.nav-item:hover {
+    color: var(--color-blue);
+    text-decoration: none;
 }
 
 .section {
@@ -279,6 +287,7 @@ a.nav-item {
     font-weight: 400;
     font-style: normal;
     font-size: var(--main-text-size);
+    line-height: 1.1;
 }
 
 .text p:not(:last-of-type) {
@@ -312,7 +321,7 @@ a.nav-item {
     font-family: "Sprat";
     font-weight: 500;
     font-style: normal;
-    font-size: var(--text-size);
+    font-size: var(--header-text-size);
     -ms-grid-column-align: center;
     justify-self: center;
     -webkit-transition: opacity .5s ease-in-out;
@@ -355,8 +364,7 @@ a.nav-item {
     z-index: 12;
     font-family: "Sprat";
     font-weight: 300;
-    /* font-size: 1.3vw; */
-    font-size: var(--text-size);
+    font-size: var(--header-text-size);
     text-align: center;
     overflow: hidden;
     display: -webkit-box;
@@ -377,8 +385,14 @@ a.nav-item {
 }
 
 .marquee div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     white-space: nowrap;
     color: #fff;
@@ -390,13 +404,12 @@ a.nav-item {
     animation: marquee var(--spanTiming) linear infinite;
     -webkit-animation: marquee var(--spanTiming) linear infinite;
     -moz-animation: marquee var(--spanTiming) linear infinite;
-    -webkit-animation-play-state: running;
-    animation-play-state: running;
 }
 
 .marquee span {
     font-family: "futura-pt";
     font-weight: 300;
+    font-size: var(--text-size);
     display: inline-block;
     margin: 2.7vw;
 }
@@ -425,10 +438,6 @@ a.nav-item {
     font-weight: 500;
 }
 
-.footer-item:first-of-type {
-    text-align: start;
-}
-
 .footer-item:last-of-type {
     text-align: end;
 }
@@ -447,6 +456,13 @@ a.nav-item {
     }
 }
 
+@media screen and (max-width: 1200px) {
+    :root {
+        --spanWidth: 120vw;
+        --spanTiming: 20s;
+    }
+}
+
 @media screen and (max-width: 720px) {
     :root {
         --top: 1rem;
@@ -460,9 +476,10 @@ a.nav-item {
     :root {
         --top: 1rem;
         --left-right: 1rem;
+        --header-text-size: 1rem;
         --main-text-size: 1.2rem;
-        --text-size: 1rem;
-        --small-text-size: 0.85rem;
+        --text-size: .9rem;
+        --small-text-size: .75rem;
         --spanWidth: 200vw;
         --spanTiming: 20s;
     }
@@ -491,13 +508,21 @@ a.nav-item {
         font-size: var(--small-text-size);
     }
 
+    span.inner-icon.caption {
+        margin-right: .5rem;
+    }
+
     span.inner-icon::after {
         width: 1.3rem;
         height: 1.3rem;
     }
 
     .header {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         z-index: 999;
     }
@@ -511,26 +536,36 @@ a.nav-item {
     }
 
     .section {
-        padding: 3rem var(--left-right) 2rem var(--left-right);
-        gap: 1.5rem
+        padding: 2rem var(--left-right) 2rem var(--left-right);
+        gap: 1rem;
     }
 
-    .marquee {
-        height: 8vh;
+    .section:not(:first-of-type) {
+        border-top: dashed 2px var(--color-blue);
+    }
+
+    .section:first-of-type {
+        padding-top: 4rem;
+    }
+
+    .image-container {
+        z-index: 1;
     }
 
     .footer {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
         align-items: stretch;
         gap: var(--top);
         padding: 1.5rem var(--left-right) 2rem var(--left-right);
     }
 
-    .footer-item:first-of-type {
-        text-align: start;
-    }
-
+    .footer-item,
     .footer-item:last-of-type {
-        text-align: start;
+        text-align: center;
     }
 }
