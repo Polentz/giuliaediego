@@ -229,6 +229,9 @@ span.inner-icon.caption {
     width: -moz-fit-content;
     width: fit-content;
     position: relative;
+    display: flex;
+    gap: 1rem;
+    transition: all .25s ease-in-out;
 }
 
 .nav-item.--lang {
@@ -248,6 +251,7 @@ span.inner-icon.caption {
 .nav-item.--current,
 .nav-item.--current:hover {
     color: var(--color-blue);
+    transform: rotate(-3deg);
 }
 
 .nav-item:hover {
@@ -353,6 +357,12 @@ span.inner-icon.caption {
 
 .image-container img {
     height: 32rem;
+}
+
+.image-container,
+.drawing-container {
+    position: relative;
+    z-index: 11;
 }
 
 .marquee {
