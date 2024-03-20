@@ -45,8 +45,7 @@ const observeFooter = () => {
     const marquee = document.querySelector(".marquee");
     const headline = document.querySelector("#regalo .text-headline");
     const options = {
-        // threshold: 0.5,
-        threshold: 0,
+        threshold: 0.5,
     };
     const handleIntersection = (entries) => {
         entries.map((entry) => {
@@ -66,9 +65,6 @@ const observeFooter = () => {
 };
 
 const observeSections = () => {
-    if (window.scrollY == 5) {
-        document.getElementById("benvenuti").classList.add("--current");
-    };
     const sections = document.querySelectorAll(".section, .footer");
     const navItems = document.querySelectorAll(".nav-item.js-href");
     const options = {
@@ -76,7 +72,8 @@ const observeSections = () => {
     };
     const handleIntersection = (entries) => {
         entries.map((entry) => {
-            if (entry.isIntersecting) {
+            console.log(window.scrollY);
+            if (entry.isIntersecting && window.scrollY > 10) {
                 navItems.forEach(item => {
                     const itemId = item.dataset.id;
                     if (itemId === entry.target.id) {
@@ -84,8 +81,9 @@ const observeSections = () => {
                         item.classList.add("--current");
                     };
                 });
-            } else if (window.scrollY == 5) {
-                document.getElementById("benvenuti").classList.add("--current");
+            } else if (window.scrollY < 10) {
+                [...navItems].forEach(i => i.classList.remove("--current"));
+                document.querySelector('.nav-item[data-id="benvenuti"]').classList.add("--current");
             };
         });
     };
