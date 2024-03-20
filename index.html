@@ -35,14 +35,15 @@
 <body>
     <header class="header --grid">
         <h1 class="header-text">Giulia <img src="assets/media/blue-heart.svg" width="100%"> Diego</h1>
-        <nav class="nav">
-            <a href="#benvenuti" class="nav-item --current">inizio</a>
-            <a href="#programma" class="nav-item">Programma</a>
-            <a href="#regalo" class="nav-item">Regalo</a>
-            <a href="#contatti" class="nav-item">Contatti</a>
-            <a href="" class="nav-item --lang">It<span>/</span>En</a>
-        </nav>
     </header>
+
+    <nav class="nav">
+        <a href="#benvenuti" class="nav-item js-href --current">Benvenuti</a>
+        <a href="#programma" class="nav-item js-href">Programma</a>
+        <a href="#regalo" class="nav-item js-href">Regalo</a>
+        <a href="#contatti" class="nav-item js-href">Contatti</a>
+        <a href="" class="nav-item --lang">It<span>/</span>En</a>
+    </nav>
 
     <section class="section" id="benvenuti">
         <div class="section-headline --grid --sticky">
@@ -53,15 +54,17 @@
         <div class="section-item --grid">
             <div class="text-container --span-2 --margin-right">
                 <div class="text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Cari invitati, vi diamo il benvenuto in questa pagina! Abbiamo pensato di creare questo
+                        spazio per darvi alcune informazioni utili e raccogliere le esigenze di tutti.</p>
+                    <p>Se avete ricevuto il nostro invito <span class="inner-icon">&quest;</span> sapete già dove e
+                        quando, scorri questa pagina per scoprire come e cosa!</p>
                 </div>
                 <div class="text-caption">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.</p>
+                    <p><span class="inner-icon caption">?</span> Per gli inviti abbiamo chiesto ad <a class="inner-link"
+                            href="https://agathesorletshop.com/" target="_blank" rel="noopener noreferrer">Agathe
+                            Sorlet</a>, illustratrice francese di Bordeaux, di poter
+                        utilizzare una delle sue creazioni. Se anche voi siete affascinati dai suoi disegni, conservate
+                        l'invito e ne farete una piccola opera d'arte.</p>
                 </div>
             </div>
             <div class="image-container --span-2 --margin-left">
@@ -80,50 +83,87 @@
             </div>
         </div>
         <div class="section-item --grid">
-            <div class="text-container --span-4 --margin-big --align-center">
+            <div class="text-container --span-2 --margin-right">
                 <div class="text">
-                    <p>Per noi questa è una giornata speciale soprattutto per avere l'occasione unica di passare una
-                        giornata con voi.<br>Viviamo lontano ed è una gioia avervi tutti vicini per festeggiare
+                    <p>Per noi questa è una giornata speciale perché avremo l'occasione unica di passare una
+                        giornata con voi. Viviamo lontano ed è una gioia avervi tutti vicini per festeggiare
                         insieme.
                     </p>
                 </div>
             </div>
         </div>
         <div class="section-item --grid">
-            <div class="text-container --span-2">
+            <div class="--span-2"></div>
+            <div class="text-container --span-2 --margin-left">
+                <div class="text-title">
+                    <p>Ore 11.30</p>
+                </div>
                 <div class="text">
-                    <p>Vi aspettiamo a partire dalle 11:30 alla <a class="inner-link" href="http://" target="_blank"
-                            rel="noopener noreferrer">Tenuta Valcurone</a> <span class="inner-icon">&quest;</span>,
-                        all'interno del Parco regionale di Montevecchia.<br>Un aperitivo e del buon vino vi faranno da
-                        benvenuto. Rilassatevi e sentitevi a vostro agio, circondati dalle colline e
-                        dai vigneti del Parco.</p>
+                    <p>Vi aspettiamo a partire dalle 11:30 alla Tenuta Valcurone <a class="inner-link"
+                            href="https://maps.app.goo.gl/XU6V1VMj42ATL3AC6" target="_blank"
+                            rel="noopener noreferrer">(clicca qui per sapere dov'è)</a>.</p>
+                    <p>Un aperitivo e del buon vino vi faranno da benvenuto. Rilassatevi e sentitevi a vostro agio,
+                        circondati dalle colline e dai vigneti del Parco di Montevecchia <span
+                            class="inner-icon">&quest;</span>.</p>
+                </div>
+                <div class="text-caption">
+                    <p><span class="inner-icon caption">?</span> Se non avete mai visitato questi luoghi, vi
+                        consigliamo di prendervi del tempo per visitare il Parco, il Santuario e il centro storico di
+                        Montevecchia.</p>
+                </div>
+            </div>
+        </div>
+        <div class="section-item --grid">
+            <div class="text-container --span-2 --margin-right">
+                <div class="text-title">
+                    <p>Ore 12.30</p>
+                </div>
+                <div class="text">
+                    <p>La cerimonia sarà celebrata da Leo e Marcus, due persone a noi care. Ci accompagnerete in questo
+                        momento importante insieme ai nostri testimoni Elisa e Yari.</p>
                 </div>
             </div>
         </div>
         <div class="section-item --grid">
             <div class="--span-2"></div>
-            <div class="text-container --span-2">
+            <div class="text-container --span-2 --margin-left">
+                <div class="text-title">
+                    <p>Dalle ore 13.00</p>
+                </div>
                 <div class="text">
-                    <p>Alle 12:30 inizierà la cerimonia, celebrata da due persone a noi care <span
-                            class="inner-icon">&quest;</span>. Saremo accompagnati dai nostri testimoni: Elisa per
-                        Giulia e Yari per Diego <span class="inner-icon">&quest;</span>. Sarà un momento informale
-                        desiderio di partecipare sentitevi liberi.
-                    </p>
+                    <p>Mangeremo insieme i piatti preparati con cura e attenzione dallo staff della
+                        Tenuta Valcurone.</p>
+                    <p>Sarà un menù in ascolto delle meravigliose materie prime locali, quanto più possibile attento
+                        alle intolleranze, alle allergie e alle scelte alimentari che vi chiediamo di segnalarci <span
+                            class="inner-icon">&quest;</span>.</p>
+                </div>
+                <div class="text-caption">
+                    <p><span class="inner-icon caption">?</span> <a class="inner-link js-href" href="#contatti">Scrivici
+                            o chiamaci</a> se hai bisogno di informazioni. </p>
                 </div>
             </div>
         </div>
         <div class="section-item --grid">
-            <div class="text-container --span-2">
+            <div class="text-container --span-2 --margin-left">
+                <div class="text-title">
+                    <p>Dalle ore 17.30 alle ore 19.30</p>
+                </div>
                 <div class="text">
-                    <p>Iniziamo a mangiare! La cucina dell Tenuta Valcurone è buona. Evvai, magnamose tutto fino alle
-                        17:00 che poi ce sta la torta. Poi tutti in cantina 'mbriachi a fare il karaoke.</p>
+                    <p>Un ultimo momento insieme di saluti e divertimento <span class="inner-icon">&quest;</span>.</p>
+                </div>
+                <div class="text-caption">
+                    <p><span class="inner-icon caption">?</span> Come mai ci salutiamo così presto? La Tenuta
+                        si trova all'interno di un parco naturale e la tutela di questo luogo è essenziale per la sua
+                        esistenza. Forti rumori, soprattutto notturni, disturberebbero i boschi che ci circondano,
+                        rendendoli inospitali per le specie che li abitano.</p>
+                    <p>Condividiamo con voi alcune linee guida suggerite dalla Tenuta e che vi chiediamo di
+                        seguire: è vietato far volare lanterne cinesi e oggetti similari; sono vietati fuochi
+                        pirotecnici. Non è consentito l'uso di palloncini a elio. Durante la cerimonia simbolica è
+                        vietato il lancio del riso, coriandoli o petali di stoffa-carta.</p>
                 </div>
             </div>
         </div>
-        <!-- <div class="text-caption">
-                <p>Se non avete mai visitato quaesti luoghi, vi consigliamo di prendervi del tempo per
-                    visitare il parco, il Santuario e il centro storico di Montevecchia.</p>
-            </div> -->
+
     </section>
 
     <section class="section" id="regalo">
@@ -133,21 +173,54 @@
             </div>
         </div>
         <div class="section-item --grid">
-            <div class="text-container">
+            <div class="text-container --span-2 --margin-right">
                 <div class="text">
-                    <p>Realizzare questa festa insieme a voi è, per noi, il regalo più grande. Per questo,
-                        non sentitevi in alcun modo obbligati a donarci qualcosa di altro se non la vostra presenza.</p>
+                    <p>Se avete piacere di contribuire al nostro viaggio di nozze, potete farlo in modalità donazione
+                        utilizzando l'IBAN qui sotto, specificando nella causale: contributo matrimonio Giulia e
+                        Diego.</p>
                 </div>
                 <div class="text-caption">
-                    <p>Ma se avete piacere di contribuire, potete farlo in modalità donazione a uno degli IBAN qui
-                        sotto, specificando nella causale: contributo matrimonio Giulia e Diego</p>
+                    <p>Nome: Diego Ajassa
+                        <br>Causale: Contributo matrimonio Giulia e Diego
+                        <br>IBAN: DE67100110012416922873
+                        <br>BIC: NTSBDEB1XXX
+                    </p>
                 </div>
+            </div>
+        </div>
+        <div class="section-item --grid">
+            <div class="text-container --span-4 --margin-big --align-center">
                 <div class="text">
-                    <p>Grazie di cuore!</p>
+                    <p>Speriamo di vedervi tutti il 24 maggio.
+                        <br>Grazie di cuore!
+                    </p>
                 </div>
             </div>
         </div>
     </section>
+
+    <footer class="footer" id="contatti">
+        <div class="marquee" style="--spanWidth: 90vw; --spanTiming: 20s;">
+            <div>Giulia & Diego <span> 24. 05. 2024 </span> Giulia & Diego <span> 24. 05. 2024 </span> Giulia & Diego
+                <span> 24. 05. 2024 </span> Giulia & Diego <span> 24. 05. 2024 </span>
+            </div>
+        </div>
+
+        <div class="footer-item text-title">
+            <p>Giulia</p>
+            <p><a href="tel:++39 340 2395820" target="_blank" rel="noopener noreferrer">+39 340 2395820</a></p>
+            <p><a href="mailto:giuliapolenta@gmail.com" target="_blank"
+                    rel="noopener noreferrer">giuliapolenta@gmail.com</a></p>
+        </div>
+        <div class="footer-item text-title">
+            <p>Diego</p>
+            <p><a href="tel:++39 392 6064030" target="_blank" rel="noopener noreferrer">+39 392 6064030</a></p>
+            <p><a href="mailto:diegoajassa@gmail.com" target="_blank"
+                    rel="noopener noreferrer">diegoajassa@gmail.com</a></p>
+        </div>
+
+
+    </footer>
 
 </body>
 
