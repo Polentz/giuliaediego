@@ -247,7 +247,8 @@ span.inner-icon.caption {
 
 .nav-item.--current,
 .nav-item.--current:hover {
-    text-decoration: underline;
+    color: var(--color-blue);
+    /* text-decoration: underline;
     -webkit-text-decoration-style: dashed;
     text-decoration-style: dashed;
     -webkit-text-decoration-color: var(--color-blue);
@@ -256,7 +257,7 @@ span.inner-icon.caption {
     text-underline-offset: 4px;
     -webkit-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out; */
 }
 
 .nav-item:hover {
@@ -278,8 +279,17 @@ span.inner-icon.caption {
     gap: 2rem;
 }
 
-.section:not(:last-of-type) {
+/* .section:not(:last-of-type) {
     min-height: var(--doc-height);
+} */
+
+.section {
+    min-height: var(--doc-height);
+}
+
+
+.section-item {
+    margin-top: var(--left-right);
 }
 
 .text {
@@ -338,16 +348,20 @@ span.inner-icon.caption {
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 1.5rem;
-    margin-top: var(--left-right);
 }
 
 .image-container {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    position: relative;
-    z-index: 10;
-    margin-top: 2rem;
+    /* position: relative;
+    z-index: 10; */
+    /* margin-top: 2rem; */
+}
+
+.image {
+    display: flex;
+    justify-content: center;
 }
 
 .image-container img {
@@ -356,8 +370,8 @@ span.inner-icon.caption {
 
 .marquee {
     width: 100vw;
-    height: 6vh;
-    z-index: 4;
+    height: 2.5rem;
+    /* z-index: 4; */
     position: fixed;
     bottom: 0;
     left: 0;
@@ -365,6 +379,7 @@ span.inner-icon.caption {
     font-family: "Sprat";
     font-weight: 300;
     font-size: var(--header-text-size);
+    line-height: 1;
     text-align: center;
     overflow: hidden;
     display: -webkit-box;
@@ -422,7 +437,7 @@ span.inner-icon.caption {
     font-size: var(--text-size);
     color: var(--color-white);
     background: var(--color-blue);
-    padding: 2rem var(--left-right) 6rem var(--left-right);
+    padding: 2rem var(--left-right) 4rem var(--left-right);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -445,14 +460,14 @@ span.inner-icon.caption {
 @media screen and (min-width: 1800px) {
     :root {
         --top: 4rem;
-        --left-right: 24rem;
+        --left-right: 40rem;
     }
 }
 
 @media screen and (min-width: 1600px) {
     :root {
         --top: 1rem;
-        --left-right: 16rem;
+        --left-right: 32rem;
     }
 }
 
