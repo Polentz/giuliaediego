@@ -47,7 +47,7 @@ html {
 
 body {
     width: 100%;
-    font-family: "futura-pt", sans-serif;
+    font-family: "futura-pt";
     font-weight: 400;
     font-style: normal;
     line-height: 1.2;
@@ -55,23 +55,28 @@ body {
 }
 
 .--grid {
+    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(4, 25%);
 }
 
 .--span-1 {
+    -ms-grid-column-span: 1;
     grid-column: span 1;
 }
 
 .--span-2 {
+    -ms-grid-column-span: 2;
     grid-column: span 2;
 }
 
 .--span-3 {
+    -ms-grid-column-span: 3;
     grid-column: span 3;
 }
 
 .--span-4 {
+    -ms-grid-column-span: 4;
     grid-column: span 4;
 }
 
@@ -92,6 +97,8 @@ body {
 }
 
 .--sticky {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     position: sticky;
     top: 1rem;
@@ -101,7 +108,9 @@ body {
 
 a.inner-link {
     text-decoration: underline;
+    -webkit-text-decoration-style: dashed;
     text-decoration-style: dashed;
+    -webkit-text-decoration-color: var(--color-blue);
     text-decoration-color: var(--color-blue);
     text-decoration-thickness: 2px;
     text-underline-offset: 4px;
@@ -124,6 +133,8 @@ span.inner-icon::after {
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     border: solid 1.5px var(--color-blue);
     border-radius: 50%;
@@ -146,14 +157,22 @@ span.inner-icon.caption {
 }
 
 .header-text {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
-    font-family: "Sprat", sans-serif;
+    font-family: "Sprat";
     font-weight: 500;
     font-style: normal;
     font-size: 1.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
     align-items: baseline;
     gap: 1rem;
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
     transform-origin: 0 0;
     pointer-events: none;
 }
@@ -164,26 +183,41 @@ span.inner-icon.caption {
 }
 
 .nav {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     position: fixed;
     top: 1rem;
     right: 4rem;
     z-index: 10;
-    font-family: "futura-pt", sans-serif;
+    font-family: "futura-pt";
     font-weight: 600;
     font-style: normal;
     font-size: 0.85rem;
     text-transform: uppercase;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: .25rem;
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 1;
     grid-column: 4 / 5;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: flex-end;
     justify-self: flex-end;
 }
 
 .nav-item {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     position: relative;
 }
@@ -193,7 +227,11 @@ a.nav-item {
 }
 
 .--lang {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     gap: 2px;
 }
@@ -219,7 +257,12 @@ a.nav-item {
     width: 100%;
     padding: 1rem 4rem 6rem 4rem;
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 2rem;
 }
@@ -229,7 +272,7 @@ a.nav-item {
 }
 
 .text {
-    font-family: "futura-pt", sans-serif;
+    font-family: "futura-pt";
     font-weight: 400;
     font-style: normal;
     font-size: 2rem;
@@ -240,7 +283,7 @@ a.nav-item {
 }
 
 .text-title {
-    font-family: "futura-pt", sans-serif;
+    font-family: "futura-pt";
     font-weight: 600;
     font-style: normal;
     font-size: 0.85rem;
@@ -252,7 +295,7 @@ a.nav-item {
 }
 
 .text-caption {
-    font-family: "futura-pt", sans-serif;
+    font-family: "futura-pt";
     font-weight: 400;
     font-style: normal;
     font-size: 1.2rem;
@@ -263,23 +306,35 @@ a.nav-item {
 }
 
 .text-headline {
-    font-family: "Sprat", sans-serif;
+    font-family: "Sprat";
     font-weight: 500;
     font-style: normal;
     font-size: 1.2rem;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
     grid-column: 2 / 4;
+    -ms-grid-column-align: center;
     justify-self: center;
+    -webkit-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
     transition: opacity .5s ease-in-out;
 }
 
 .text-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 1.5rem;
     margin-top: 4rem;
 }
 
 .image-container {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     position: relative;
     z-index: 10;
@@ -315,11 +370,13 @@ a.nav-item {
     justify-content: center;
     background: var(--color-blue);
     pointer-events: none;
+    -webkit-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
     transition: opacity .5s ease-in-out;
 }
 
 .marquee span {
-    font-family: "futura-pt", sans-serif;
+    font-family: "futura-pt";
     font-weight: 300;
     display: inline-block;
     margin: 2.7vw;
@@ -344,14 +401,20 @@ a.nav-item {
 .footer {
     width: 100%;
     height: auto;
-    font-family: "futura-pt", sans-serif;
+    font-family: "futura-pt";
     font-weight: 300;
     font-size: 1.2rem;
     color: var(--color-white);
     background: var(--color-blue);
     padding: 2rem 4rem 6rem 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     gap: 4rem;
 }
