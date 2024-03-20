@@ -72,7 +72,6 @@ const observeSections = () => {
     };
     const handleIntersection = (entries) => {
         entries.map((entry) => {
-            console.log(window.scrollY);
             if (entry.isIntersecting && window.scrollY > 10) {
                 navItems.forEach(item => {
                     const itemId = item.dataset.id;
