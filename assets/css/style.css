@@ -287,7 +287,6 @@ span.inner-icon.caption {
     min-height: var(--doc-height);
 }
 
-
 .section-item {
     margin-top: 4rem;
 }
@@ -303,7 +302,7 @@ span.inner-icon.caption {
 }
 
 .drawing-container img {
-    height: 40vh;
+    height: 12rem;
 }
 
 .text {
@@ -368,9 +367,6 @@ span.inner-icon.caption {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    /* position: relative;
-    z-index: 10; */
-    /* margin-top: 2rem; */
 }
 
 .image {
@@ -379,7 +375,7 @@ span.inner-icon.caption {
 }
 
 .image-container img {
-    height: 65vh;
+    height: 32rem;
 }
 
 .marquee {
@@ -482,12 +478,28 @@ span.inner-icon.caption {
         --top: 1rem;
         --left-right: 32rem;
     }
+
+    .section:not(:last-of-type) {
+        min-height: unset;
+    }
+
+    .section-item {
+        margin-top: 8rem;
+    }
 }
 
 @media screen and (max-width: 1200px) {
     :root {
         --spanWidth: 120vw;
         --spanTiming: 20s;
+    }
+
+    .section:not(:last-of-type) {
+        min-height: unset;
+    }
+
+    .section-item {
+        margin-top: 8rem;
     }
 }
 

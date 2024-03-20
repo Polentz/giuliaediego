@@ -45,7 +45,8 @@ const observeFooter = () => {
     const marquee = document.querySelector(".marquee");
     const headline = document.querySelector("#regalo .text-headline");
     const options = {
-        threshold: 0.5,
+        // threshold: 0.5,
+        threshold: 0,
     };
     const handleIntersection = (entries) => {
         entries.map((entry) => {
