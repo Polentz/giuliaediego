@@ -365,6 +365,21 @@ span.inner-icon.caption {
     z-index: 11;
 }
 
+.text-container,
+.image-container,
+.drawing-container {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity .5s ease, transform .5s ease;
+}
+
+.text-container.--appear,
+.image-container.--appear,
+.drawing-container.--appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .marquee {
     width: 100vw;
     height: 2.5rem;
@@ -402,9 +417,10 @@ span.inner-icon.caption {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: justify;
+    /* -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    justify-content: space-between; */
+    gap: 2rem;
     white-space: nowrap;
     color: #fff;
     will-change: transform;
@@ -477,8 +493,7 @@ span.inner-icon.caption {
 
 @media screen and (max-width: 1200px) {
     :root {
-        --spanWidth: 120vw;
-        --spanTiming: 20s;
+        --spanWidth: 150vw;
     }
 
     .section:not(:last-of-type) {
@@ -486,12 +501,11 @@ span.inner-icon.caption {
     }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 780px) {
     :root {
         --top: 1rem;
         --left-right: 2rem;
-        --spanWidth: 150vw;
-        --spanTiming: 20s;
+        --spanWidth: 180vw;
     }
 }
 
@@ -503,8 +517,7 @@ span.inner-icon.caption {
         --main-text-size: 1.2rem;
         --text-size: .9rem;
         --small-text-size: .75rem;
-        --spanWidth: 200vw;
-        --spanTiming: 20s;
+        --spanWidth: 260vw;
     }
 
     .--grid {

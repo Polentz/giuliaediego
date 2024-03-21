@@ -1,3 +1,6 @@
+gsap.registerPlugin(ScrollTrigger);
+
+
 const documentHeight = () => {
     const doc = document.documentElement;
     doc.style.setProperty("--doc-height", `${window.innerHeight}px`);
@@ -93,14 +96,38 @@ const observeSections = () => {
 };
 
 
+const revealOnLoad = () => {
+    const reveals = document.querySelectorAll(".text-container, .image-container, .drawing-container");
+    reveals.forEach(element => {
+        element.classList.add("--appear");
+    });
+};
+
+const revealOnScroll = () => {
+    const reveals = document.querySelectorAll(".text-container, .image-container, .drawing-container");
+    for (let i = 0; i < reveals.length; i++) {
+        const element = reveals[i];
+        const windowHeight = window.innerHeight;
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 100;
+        if (elementTop < windowHeight - elementVisible) {
+            element.classList.add("--appear");
+        } else {
+            element.classList.remove("--appear");
+        };
+    };
+};
+
 window.addEventListener("load", () => {
     documentHeight();
     handleInternalLinks();
     observeFooter();
+    revealOnLoad();
 });
 
 window.addEventListener("scroll", () => {
     observeSections();
+    revealOnScroll();
 })
 
 window.addEventListener("resize", () => {
