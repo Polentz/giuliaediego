@@ -364,6 +364,7 @@ span.inner-icon.caption {
 .drawing-container {
     position: relative;
     z-index: 11;
+    pointer-events: none;
 }
 
 .text-container,
