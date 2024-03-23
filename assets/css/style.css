@@ -251,12 +251,13 @@ span.inner-icon.caption {
 .nav-item.--current,
 .nav-item.--current:hover {
     color: var(--color-blue);
-    transform: rotate(-3deg);
+    transform: rotate(-4deg);
 }
 
 .nav-item:hover {
     color: var(--color-blue);
     text-decoration: none;
+    transform: rotate(-4deg);
 }
 
 .section {
@@ -579,6 +580,10 @@ span.inner-icon.caption {
         gap: 1rem;
     }
 
+    #programma .section-item {
+        gap: 2rem;
+    }
+
     .section:not(:first-of-type) {
         border-top: dashed 2px var(--color-blue);
     }
@@ -601,6 +606,10 @@ span.inner-icon.caption {
 
     .image-container img {
         height: 16rem;
+    }
+
+    .text-container {
+        gap: 1rem;
     }
 
     .footer {
